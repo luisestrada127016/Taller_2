@@ -79,7 +79,6 @@ def calcular_valor_producto(inventario):
     else:
         print("El producto no existe en el inventario.")
 
-
 def main():
     inventario = cargar_inventario()
     while True:
@@ -90,7 +89,7 @@ def main():
         print("4. Eliminar producto")
         print("5. Calcular valor total del producto")
         print("6. Calcular valor total del inventario")
-        print("7. Salir")
+        print("7. Salir\n")
 
         opcion = input("Elige una opción: ")
 
