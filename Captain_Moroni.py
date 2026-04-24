@@ -71,11 +71,19 @@ def calcular_valor_total(inventario):
         total = sum(datos["precio"] * datos["cantidad"] for datos in inventario.values())
         print(f"Valor total del inventario: {total}")
 
+def calcular_valor_producto(inventario):
+    nombre = input("\nNombre del producto a calcular: ").capitalize()
+    if nombre in inventario:
+        total = inventario[nombre]["precio"] * inventario[nombre]["cantidad"]
+        print(f"Valor total de '{nombre}': {total}")
+    else:
+        print("El producto no existe en el inventario.")
+
+
 def main():
     inventario = cargar_inventario()
-
     while True:
-        print("\n--- MENÚ ---\n")
+        print("\n=== MENÚ ===\n")
         print("1. Agregar producto")
         print("2. Listar productos")
         print("3. Actualizar cantidad")
@@ -102,6 +110,4 @@ def main():
                 print("Opción no válida.")
         except Exception as e:
             print(f"Error: {e}")
-
-
 main()
