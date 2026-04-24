@@ -88,8 +88,9 @@ def main():
         print("2. Listar productos")
         print("3. Actualizar cantidad")
         print("4. Eliminar producto")
-        print("5. Calcular valor total del inventario")
-        print("6. Salir")
+        print("5. Calcular valor total del producto")
+        print("6. Calcular valor total del inventario")
+        print("7. Salir")
 
         opcion = input("Elige una opción: ")
 
@@ -103,8 +104,10 @@ def main():
             elif opcion == "4":
                 eliminar_producto(inventario)
             elif opcion == "5":
-                calcular_valor_total(inventario)
+                calcular_valor_producto(inventario)
             elif opcion == "6":
+                calcular_valor_total(inventario)
+            elif opcion == "7":
                 break
             else:
                 print("Opción no válida.")
